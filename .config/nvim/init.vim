@@ -11,23 +11,17 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-scripts/vim-auto-save'
 Plug 'kien/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'xolox/vim-misc'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'sukima/xmledit'
 Plug 'vhdirk/vim-cmake'
-Plug 'SirVer/ultisnips'
 Plug 'ncm2/float-preview.nvim'
-Plug 'bfrg/vim-cpp-modern'
 Plug 'sbdchd/neoformat'
 Plug 'airblade/vim-gitgutter' 
 Plug 'tpope/vim-fugitive'
 
 " colorschemes
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'morhetz/gruvbox'
-Plug 'pveyes/atom-snazzy-clear-syntax'
 Plug 'rafi/awesome-vim-colorschemes'
 
 call plug#end()
@@ -45,15 +39,14 @@ set ic
 set hls
 " использовать инкрементальный поиск
 set is
-" минимальная высота окна пусть будет 0 (по умолчанию - 1)
-set winminheight=0
 
-
+" Indent settings
 set tabstop=8 
 set softtabstop=0 
 set expandtab 
 set shiftwidth=4  
 set smarttab
+
 " установить шрифт Courier New Cyr
 " настраиваю для работы с русскими словами (чтобы w, b, * понимали
 " русские слова)
@@ -63,8 +56,9 @@ set showcmd
 " перенос по словам, а не по буквам
 set linebreak
 set dy=lastline
-set t_Co=256
+
 set clipboard=unnamedplus
+
 " disable default preview window
 set completeopt-=preview
 set relativenumber
@@ -84,21 +78,12 @@ let g:UltiSnipsJumpBackwardTrigger="<c-K>"
 let g:float_preview#docked=0
 
 syntax on
-colorscheme challenger_deep
+colorscheme default
 
-
-" YCM settings
-let g:ycm_global_ycm_extra_conf = '/home/semyon/.local/share/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
-let g:ycm_always_populate_location_list = 1
-let g:ycm_confirm_extra_conf = 0
-""""""""""""""
 
 " Gitgutter settings
 autocmd BufReadPost *.cpp :GitGutterSignsDisable
 """""""""""""""""""
-
-let g:cpp_simple_highlight = 1
-let g:cpp_named_requirements_highlight = 1
 
 if has('nvim') || has('termguicolors')
   set termguicolors

@@ -9,8 +9,6 @@ set cinoptions+=(0
 set makeprg=make\ -C\ ./bin\ -j3
 set completeopt-=preview
 
-let g:ycm_semantic_triggers =  { 'cpp,objcpp,c++' : ['->', '.', '::', 're!.'] }
-
 map <C-K> :Neoformat<cr>
 imap <C-K> <c-o>:Neoformat<cr>
 
