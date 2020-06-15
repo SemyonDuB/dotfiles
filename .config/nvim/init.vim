@@ -71,9 +71,6 @@ set relativenumber
 
 let g:auto_save = 1
 
-let g:NERDTreeDirArrowExpandable = '   '
-let g:NERDTreeDirArrowCollapsible = '   '
-
 let g:plugin_name="xmledit-1.9.1"
 
 let g:UltiSnipsEditSplit="vertical"
