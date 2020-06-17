@@ -82,6 +82,7 @@ let g:float_preview#docked=0
 
 syntax on
 colorscheme default
+set background=dark
 
 
 " Gitgutter settings
@@ -101,7 +102,8 @@ inoremap <A-k> <C-o>k
 inoremap <A-l> <C-o>l
 
 
-
+" coc.nvim configuration
+"
 " if hidden is not set, TextEdit might fail.
 set hidden
 
@@ -223,3 +225,4 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+

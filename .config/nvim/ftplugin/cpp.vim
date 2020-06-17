@@ -1,13 +1,8 @@
-colorscheme onehalfdark
-
-hi EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
-
 set path+=**
 set cindent
 set cinoptions+={
 set cinoptions+=(0
 set makeprg=make\ -C\ ./bin\ -j3
-set completeopt-=preview
 
 map <C-K> :Neoformat<cr>
 imap <C-K> <c-o>:Neoformat<cr>
