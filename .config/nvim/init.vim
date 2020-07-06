@@ -7,9 +7,8 @@ filetype plugin on
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-scripts/vim-auto-save'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
@@ -19,6 +18,9 @@ Plug 'ncm2/float-preview.nvim'
 Plug 'sbdchd/neoformat'
 Plug 'airblade/vim-gitgutter' 
 Plug 'tpope/vim-fugitive'
+
+" The plug-in visualizes undo history and makes it easier to browse and switch between different undo branches.
+Plug 'mbbill/undotree'
 
 " LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -80,6 +82,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-K>"
 
 let g:float_preview#docked=0
 
+" CtrlP configuration
+let g:ctrlp_working_path_mode = 'c'
+"""""""""""""""""""
+
 syntax on
 colorscheme default
 set background=dark
@@ -94,7 +100,6 @@ if has('nvim') || has('termguicolors')
 endif
 
 " mapping
-map <C-n> :NERDTreeToggle<CR>
 noremap <silent><buffer> <F9> :exec 'source '.bufname('%')<CR>
 inoremap <A-h> <C-o>h
 inoremap <A-j> <C-o>j
