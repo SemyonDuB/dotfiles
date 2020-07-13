@@ -67,6 +67,15 @@ set dy=lastline
 
 set clipboard=unnamedplus
 
+" netrw configuration
+let g:netrw_banner       = 0
+let g:netrw_keepdir      = 0
+let g:netrw_liststyle    = 1 " or 3
+let g:netrw_sort_options = 'i'
+
+autocmd VimEnter * if !argc() | Explore | endif
+autocmd VimEnter * if isdirectory(expand('<afile>')) | Explore | endif
+
 " disable default preview window
 set completeopt-=preview
 set relativenumber
@@ -83,7 +92,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-K>"
 let g:float_preview#docked=0
 
 " CtrlP configuration
-let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_working_path_mode = 'ra'
 """""""""""""""""""
 
 syntax on
@@ -101,6 +110,7 @@ endif
 
 " mapping
 noremap <silent><buffer> <F9> :exec 'source '.bufname('%')<CR>
+nnoremap <C-l> :set hlsearch!<CR>
 inoremap <A-h> <C-o>h
 inoremap <A-j> <C-o>j
 inoremap <A-k> <C-o>k
