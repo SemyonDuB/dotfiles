@@ -9,7 +9,7 @@ export ZSH="/home/semyon/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-if [[ "$(tty) == /dev/tty*" ]]; then
+if [[ $(tty) == /dev/tty* ]]; then
     ZSH_THEME="clean"
 else
     ZSH_THEME="af-magic"

@@ -7,6 +7,7 @@ filetype plugin on
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'preservim/nerdtree'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -76,6 +77,9 @@ let g:netrw_sort_options = 'i'
 autocmd VimEnter * if !argc() | Explore | endif
 autocmd VimEnter * if isdirectory(expand('<afile>')) | Explore | endif
 
+" NerdTree configuration
+map <C-n> :NERDTreeToggle<CR>
+
 " disable default preview window
 set completeopt-=preview
 set relativenumber
@@ -96,7 +100,7 @@ let g:ctrlp_working_path_mode = 'ra'
 """""""""""""""""""
 
 syntax on
-colorscheme default
+colorscheme purify
 set background=dark
 
 
@@ -115,6 +119,9 @@ inoremap <A-h> <C-o>h
 inoremap <A-j> <C-o>j
 inoremap <A-k> <C-o>k
 inoremap <A-l> <C-o>l
+
+" mapping for terminal emulator
+tnoremap <Esc> <C-\><C-n>
 
 
 " coc.nvim configuration
