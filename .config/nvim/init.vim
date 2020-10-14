@@ -16,9 +16,9 @@ Plug 'tpope/vim-surround'
 Plug 'sukima/xmledit'
 Plug 'vhdirk/vim-cmake'
 Plug 'ncm2/float-preview.nvim'
-Plug 'sbdchd/neoformat'
 Plug 'airblade/vim-gitgutter' 
 Plug 'tpope/vim-fugitive'
+Plug 'dhruvasagar/vim-table-mode'
 
 " The plug-in visualizes undo history and makes it easier to browse and switch between different undo branches.
 Plug 'mbbill/undotree'
