@@ -13,7 +13,6 @@
 - duf - sudo apt install duf
 - gdu - sudo apt install gdu
 
-
 ```sh
 sudo apt install git
 
