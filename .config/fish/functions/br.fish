@@ -1,1 +1,4 @@
-/home/simon/.local/share/broot/launcher/fish/br.fish
+function br --wraps=broot --description 'alias br broot'
+  broot $argv
+        
+end
