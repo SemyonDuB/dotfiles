@@ -1,6 +1,3 @@
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh
 [submodule ".local/share/fonts/source-code-pro"]
 	path = .local/share/fonts/source-code-pro
 	url = https://github.com/adobe-fonts/source-code-pro
