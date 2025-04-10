@@ -42,7 +42,10 @@ cd ../
 rm -rf ./helix/
 ```
 
-zellij: cargo install --locked zellij
+zellij:
+```sh
+curl -s -L https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz | tar xvz -C ~/.local/bin/
+```
 
 broot: 
 ```bash
