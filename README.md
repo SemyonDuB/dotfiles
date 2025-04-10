@@ -1,5 +1,6 @@
 # Dotfiles
 
+- git - sudo apt install git
 - fish - sudo apt install fish
 - bat / batcat - sudo apt install bat
 - btop - sudo apt install btop
@@ -14,6 +15,14 @@
 
 
 ```sh
+sudo apt install git
+
+cd ~
+git init
+git remote add origin git@github.com:SemyonDuB/dotfiles.git
+git fetch
+git checkout -f master
+
 sudo apt install fish bat btop exa neovim tldr curl ripgrep fzf duf gdu
 
 sudo add-shell /usr/bin/fish
