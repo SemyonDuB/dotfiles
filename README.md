@@ -1,18 +1,21 @@
 # Dotfiles
 
-fish - sudo apt install fish
-bat / batcat - sudo apt install bat
-btop - sudo apt install btop
-exa - sudo apt install exa
-nvim - sudo apt install neovim
-tldr - sudo apt install tldr
-curl - sudo apt install curl
-rg - sudo apt install ripgrep
-fzf - sudo apt install fzf
-duf - sudo apt install duf
-gdu - sudo apt install gdu
+- fish - sudo apt install fish
+- bat / batcat - sudo apt install bat
+- btop - sudo apt install btop
+- exa - sudo apt install exa
+- nvim - sudo apt install neovim
+- tldr - sudo apt install tldr
+- curl - sudo apt install curl
+- rg - sudo apt install ripgrep
+- fzf - sudo apt install fzf
+- duf - sudo apt install duf
+- gdu - sudo apt install gdu
+
 
 ```sh
+sudo apt install fish bat btop exa neovim tldr curl ripgrep fzf duf gdu
+
 sudo add-shell /usr/bin/fish
 chsh -s /usr/bin/fish
 mkdir ~/.local/bin/
