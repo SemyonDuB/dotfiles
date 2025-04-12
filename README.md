@@ -37,7 +37,8 @@ helix:
 git clone https://github.com/helix-editor/helix
 cd helix/
 cargo install --path helix-term --locked
-cp -a ./runtime/ ~/.config/helix/runtime/
+mkdir -p ~/.config/helix/runtime/
+cp -a ./runtime/ ~/.config/helix/
 cd ../
 rm -rf ./helix/
 ```
@@ -55,10 +56,12 @@ cargo install --locked broot
 
 lazygit:
 ```sh
-set LAZYGIT_VERSION $(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
-curl -Lo lazygit.tar.gz https://github.com/jesseduffield/lazygit/releases/download/v"$LAZYGIT_VERSION"/lazygit_"$LAZYGIT_VERSION"_Linux_x86_64.tar.gz
+set lazygit_version $(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | rg -Po '"tag_name": *"v\K[^"]*')
+
+curl -Lo lazygit.tar.gz https://github.com/jesseduffield/lazygit/releases/download/v"$lazygit_version"/lazygit_"$lazygit_version"_Linux_x86_64.tar.gz
+
 tar xf lazygit.tar.gz lazygit
-sudo install lazygit -D -t /usr/local/bin/
+mv lazygit ~/.local/bin/
 rm -rf lazygit*
 ```
 
