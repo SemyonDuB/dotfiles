@@ -1,0 +1,4 @@
+[[language]]
+name = "gas"
+file-types = ["asm"]
+indent = { tab-width = 4, unit = "    " }
