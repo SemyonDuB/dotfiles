@@ -37,8 +37,8 @@ helix:
 git clone https://github.com/helix-editor/helix
 cd helix/
 cargo install --path helix-term --locked
-mkdir -p ~/.config/helix/runtime/
-cp -a ./runtime/ ~/.config/helix/
+mkdir -p ~/.local/share/helix/runtime/
+cp -a ./runtime/ ~/.local/share/helix/
 cd ../
 rm -rf ./helix/
 ```
